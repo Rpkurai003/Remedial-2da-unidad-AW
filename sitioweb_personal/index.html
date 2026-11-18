@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="RUBEN PEÑA">
+    <meta name="description" content="Portafolio profesional de desarrollo web y proyectos personales.">
+    <meta name="keywords" content="portafolio, desarrollo web, HTML5, CSS3, Bootstrap, proyectos">
+    <title>Portafolio Personal - Inicio</title>
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/1006/1006771.png" type="image/x-icon">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* =========================================
+           VARIABLES Y COLORES
+           ========================================= */
+        :root {
+            --bg-black: #0d0d0d;
+            --bg-dark-card: #141414;
+            --purple-dark: #1c052d;
+            --purple-medium: #2a0845;
+            --purple-light: #b388ff;
+            --red-dark: #4a0000;
+            --red-accent: #8b0000;
+            --red-bright: #d32f2f;
+            --text-light: #e0e0e0;
+            --font-primary: 'Montserrat', sans-serif;
+            --font-heading: 'Roboto Slab', serif;
+        }
+
+        body {
+            background-color: var(--bg-black);
+            color: var(--text-light);
+            font-family: var(--font-primary);
+            padding-top: 95px;
+        }
+
+        .font-heading {
+            font-family: var(--font-heading);
+            font-weight: 700;
+        }
+
+        /* Menú superior rojo oscuro sólido */
+        header.fixed-top {
+            z-index: 1030;
+            background-color: var(--red-dark) !important;
+        }
+
+        .bg-custom-dark,
+        .navbar {
+            background-color: var(--red-dark) !important;
+            border-bottom: 2px solid #2a0000;
+        }
+
+        .navbar .nav-link {
+            color: #f0f0f0 !important;
+            font-weight: 500;
+            padding: 8px 14px;
+            transition: color 0.2s ease;
+        }
+
+        .navbar .nav-link:hover,
+        .navbar .nav-link.active {
+            color: #ffb4b4 !important;
+        }
+
+        .card-custom {
+            background-color: var(--bg-dark-card);
+            border: 1px solid var(--purple-medium);
+            box-shadow: 0 4px 15px rgba(42, 8, 69, 0.4);
+            transition: transform 0.3s ease;
+        }
+
+        .card-custom:hover {
+            transform: translateY(-5px);
+            border-color: var(--red-accent);
+        }
+
+        .btn-danger-custom {
+            background-color: var(--red-accent);
+            border-color: var(--red-dark);
+        }
+
+        .btn-danger-custom:hover {
+            background-color: var(--red-bright);
+            border-color: var(--red-accent);
+        }
+
+        .btn-purple {
+            background-color: var(--purple-medium);
+            color: #ffffff;
+            border-color: var(--purple-light);
+        }
+
+        .btn-purple:hover {
+            background-color: var(--purple-dark);
+            color: var(--purple-light);
+        }
+
+        .text-danger-custom { color: var(--red-bright); }
+        .text-purple-light { color: var(--purple-light); }
+        .border-purple { border-color: var(--purple-medium) !important; }
+        .border-custom { border: 3px solid var(--red-accent); }
+
+        /* ===================================================
+           SECCIÓN 1 (EXACTA A LA HOJA DEL REMEDIAL)
+           Fondo gris claro, 3 columnas y foto de modelo
+           =================================================== */
+        .remedial-seccion-1 {
+            background-color: #f4f5f7 !important;
+            color: #222222;
+            border-radius: 8px;
+            padding: 60px 45px;
+            margin-top: 60px;
+            margin-bottom: 90px; /* Separación amplia */
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
+        }
+
+        .remedial-seccion-1 .subtitulo {
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: #777;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+            display: block;
+        }
+
+        .remedial-seccion-1 .titulo-seccion {
+            font-size: 2.1rem;
+            font-weight: 800;
+            color: #111;
+            letter-spacing: 1.2px;
+            margin-bottom: 8px;
+        }
+
+        /* Línea turquesa idéntica al ejemplo de la imagen */
+        .remedial-seccion-1 .linea-decorativa {
+            width: 45px;
+            height: 2px;
+            background-color: #20c997;
+            margin-bottom: 35px;
+        }
+
+        .remedial-seccion-1 .icono-box {
+            font-size: 2.1rem;
+            color: #333333;
+            margin-bottom: 14px;
+            line-height: 1;
+        }
+
+        .remedial-seccion-1 .item-titulo {
+            font-size: 0.9rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: #111;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .remedial-seccion-1 .item-texto {
+            font-size: 0.83rem;
+            color: #666;
+            line-height: 1.55;
+            margin-bottom: 0;
+        }
+
+        .remedial-seccion-1 .persona-col {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .remedial-seccion-1 .img-recorte-persona {
+            max-height: 380px;
+            width: 100%;
+            max-width: 290px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        /* ===================================================
+           SECCIÓN 2 (EXACTA A LA HOJA DEL REMEDIAL: SPLIT 50/50)
+           Panel izq: Gris suave con iconos | Panel der: Foto con "SERVICES"
+           =================================================== */
+        .remedial-seccion-2 {
+            background-color: #fafafa !important;
+            color: #222222;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-top: 90px;    /* Separación amplia superior */
+            margin-bottom: 120px; /* Separación amplia inferior */
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
+        }
+
+        .remedial-seccion-2 .panel-izquierdo {
+            padding: 60px 45px;
+            background-color: #fafafa;
+        }
+
+        .remedial-seccion-2 .nav-tabs-custom {
+            display: flex;
+            gap: 25px;
+            margin-bottom: 35px;
+        }
+
+        .remedial-seccion-2 .tab-link {
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #999;
+            text-decoration: none;
+            padding-bottom: 4px;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s ease;
+        }
+
+        .remedial-seccion-2 .tab-link.active,
+        .remedial-seccion-2 .tab-link:hover {
+            color: #111;
+            border-bottom-color: #111;
+        }
+
+        /* Filas de servicios: icono a la izquierda + texto al lado */
+        .remedial-seccion-2 .service-row {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 30px;
+        }
+
+        .remedial-seccion-2 .service-icon {
+            font-size: 2.2rem;
+            color: #222;
+            margin-right: 22px;
+            line-height: 1;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .remedial-seccion-2 .service-content h5 {
+            font-size: 0.92rem;
+            font-weight: 700;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            color: #111;
+            margin-bottom: 6px;
+        }
+
+        .remedial-seccion-2 .service-content p {
+            font-size: 0.83rem;
+            color: #666;
+            margin-bottom: 0;
+            line-height: 1.55;
+        }
+
+        /* Columna derecha: foto de escritorio de diseño idéntica al ejemplo */
+        .remedial-seccion-2 .service-banner {
+            position: relative;
+            min-height: 520px;
+            height: 100%;
+            background-color: #1a1a1a;
+            background-image: url('https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=900&q=80');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .remedial-seccion-2 .service-banner::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.52);
+        }
+
+        .remedial-seccion-2 .service-banner-content {
+            position: relative;
+            z-index: 2;
+            color: #ffffff;
+            padding: 30px;
+        }
+
+        .remedial-seccion-2 .service-banner-content h3 {
+            font-size: 2.4rem;
+            font-weight: 800;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .remedial-seccion-2 .service-banner-content p {
+            font-size: 0.95rem;
+            letter-spacing: 1px;
+            color: #dcdcdc;
+            margin: 0;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER Y NAVEGACIÓN -->
+    <header class="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-custom-dark">
+            <div class="container">
+                <a class="navbar-brand font-heading" href="index.html">
+                    <i class="bi bi-code-slash text-light"></i> MiPortafolio
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#sobre-mi">Sobre Mí</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#seccion-enfoque">Enfoque</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#seccion-servicios">Servicios</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#portafolio-proyectos">Proyectos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#hobbies">Hobbies/Multimedia</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container my-5">
+
+        <!-- SECCIÓN: SOBRE MÍ -->
+        <section id="sobre-mi" class="mb-5 p-4 rounded card-custom">
+            <div class="row align-items-center">
+                <div class="col-md-4 text-center mb-3 mb-md-0">
+                    <img src="fondo de perfil art.jpg" alt="Foto de Perfil" class="img-fluid rounded-circle border-custom">
+                </div>
+                <div class="col-md-8">
+                    <h1 class="font-heading">¡Hola! Soy Rubén (o Kurai con el nombre artístico)</h1>
+                    <p class="lead">Bienvenido a mi sitio web personal. Aquí podrás conocer mi trayectoria académica y proyectos personales.</p>
+                    
+                    <button class="btn btn-purple" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePerfil">
+                        <i class="bi bi-info-circle"></i> Leer más sobre mí
+                    </button>
+                    <div class="collapse mt-3" id="collapsePerfil">
+                        <div class="card card-body bg-dark text-light border-purple">
+                            Estudiante de la carrera de entornos virtuales y negocios digitales, apasionado por el arte digital, desarrollo de videojuegos, música y distintos entornos tecnológicos; además también apasionado por el Taekwondo y subgéneros de baile electrónico.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================
+             Aqui inicia la seccion 1 no confundir aviso de mi para mi (o+o)
+             ======================================================== -->
+        <section id="seccion-enfoque" class="remedial-seccion-1">
+            <div class="row align-items-center">
+                <!-- Columna Izquierda: Títulos y 3 columnas -->
+                <div class="col-lg-8 col-md-7 mb-4 mb-md-0">
+                    <span class="subtitulo">MAS SOBRE MI </span>
+                    <h2 class="titulo-seccion font-heading">MIS PASATIEMPOS MAS INTERESANTES</h2>
+                    <div class="linea-decorativa"></div>
+
+                    <div class="row g-4">
+                        <!-- Columna 1: Reloj -->
+                        <div class="col-12 col-md-4 pe-md-3">
+                            <div class="icono-box">
+                                <i class="bi bi-clock"></i>
+                            </div>
+                            <h6 class="item-titulo font-heading">PASATIEMPO (CON MAS TIEMPO)
+                                
+                            </h6>
+                            <p class="item-texto">
+                                Realizo de manera creativa mediante la inspiracion dibujos con el estilo tradicional a base de lapiz y pluma.
+                            </p>
+                        </div>
+                        <!-- Columna 2: Estrella -->
+                        <div class="col-12 col-md-4 pe-md-3">
+                            <div class="icono-box">
+                                <i class="bi bi-star"></i>
+                            </div>
+                            <h6 class="item-titulo font-heading">Mi pasatiempo Estrella</h6>
+                            <p class="item-texto">
+                                Crear personajes y historias para fututoros proyectos mediante la inspiracion musical y artistica.
+                            </p>
+                        </div>
+                        <!-- Columna 3: Maletín / Soporte -->
+                        <div class="col-12 col-md-4 pe-md-3">
+                            <div class="icono-box">
+                                <i class="bi bi-briefcase"></i>
+                            </div>
+                            <h6 class="item-titulo font-heading">PASATIEMPO MAS CREATIVO
+                                PARA USO ESTIDUiaNTIL/PROFESIONAl
+                            </h6>
+                            <p class="item-texto">
+                                Creacion de armas,armaduras y artilugios para cosplay o disfraz echos solo con materiales reciclados (como se muestra en la imagen).
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Columna Derecha: Foto representativa -->
+                <div class="col-lg-4 col-md-5 persona-col text-center">
+                    <img src="capitaSoldadoDRPESTE.jpeg" 
+                         alt="Modelo representativa" class="img-fluid img-recorte-persona">
+                </div>
+            </div>
+        </section>
+
+
+
+          <!-- ========================================================
+             Aqui inicia la seccion 2 no confundir aviso de mi para mi (o++o)
+             ======================================================== -->
+        
+        <section id="seccion-servicios" class="remedial-seccion-2">
+            <div class="row g-0 align-items-stretch">
+                <!-- Columna Izquierda: Pestañas + Lista con iconos -->
+                <div class="col-lg-6 panel-izquierdo">
+                    <!-- Pestañas superiores -->
+                    <div class="nav-tabs-custom">
+                        <a href="#seccion-servicios" class="tab-link active">Los productos que vendo</a>
+                        <a href="#seccion-servicios" class="tab-link">Ejemplo</a>
+                    </div>
+
+                    <!-- Fila 1: Corazón -->
+                    <div class="service-row">
+                        <div class="service-icon">
+                            <i class="bi bi-suit-heart"></i>
+                        </div>
+                        <div class="service-content">
+                            <h5 class="font-heading">POSTRES Deliciosos</h5>
+                            <p>postres eleaborados de forma casera con un buen toque de dulzura.</p>
+                        </div>
+                    </div>
+
+                    <!-- Fila 2: Capas -->
+                    <div class="service-row">
+                        <div class="service-icon">
+                            <i class="bi bi-layers"></i>
+                        </div>
+                        <div class="service-content">
+                            <h5 class="font-heading">Botanas y dulces para el antojo</h5>
+                            <p>Un tentempie para esas tardes arduas de trabajo.</p>
+                        </div>
+                    </div>
+
+                    <!-- Fila 3: Libro / Soporte -->
+                    <div class="service-row mb-0">
+                        <div class="service-icon">
+                            <i class="bi bi-book"></i>
+                        </div>
+                        <div class="service-content">
+                            <h5 class="font-heading">Pedidos personalizados</h5>
+                            <p>cotiza tus pedidos al *** *** *****.</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                    <!-- Columna Derecha: AQUÍ ESTÁ LA IMAGEN -->
+                <div class="col-lg-6 d-flex">
+                    <img src="trufas.jpeg" 
+                         alt="Foto de la sección" 
+                         class="img-fluid w-100 h-100" 
+                         style="object-fit: cover; min-height: 420px;">
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN: PORTAFOLIO Y PROYECTOS -->
+        <section id="portafolio-proyectos" class="mb-5">
+            <h2 class="font-heading text-center mb-4 text-purple-light">Mis Proyectos</h2>
+            
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card card-custom h-100">
+                        <img src="ejemplo referencia fl studio.jpg" class="card-img-top" alt="Proyecto 1">
+                        <div class="card-body">
+                            <h5 class="card-title font-heading">Producción Musical</h5>
+                            <p class="card-text">Tengo la idea de comenzar en el mundo de producción musical específicamente en la música electrónica con los géneros sex trance, breakcore, hardstyle y ebm.</p>
+                            <button class="btn btn-outline-danger w-100" data-bs-toggle="modal" data-bs-target="#modalProyecto1">
+                                Ver detalles
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="card card-custom h-100">
+                        <img src="imagen unity ejemplo.webp" class="card-img-top" alt="Proyecto 2">
+                        <div class="card-body">
+                            <h5 class="card-title font-heading">Desarrollo de Videojuegos</h5>
+                            <p class="card-text">Proyecto personal en Unity enfocado en mecánicas interactivas y entornos virtuales (Actualmente en proceso).</p>
+                            <button class="btn btn-outline-danger w-100" data-bs-toggle="modal" data-bs-target="#modalProyecto1">
+                                Ver detalles
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN: HOBBIES Y MULTIMEDIA -->
+        <section id="hobbies" class="mb-5 p-4 rounded card-custom">
+            <h2 class="font-heading text-center mb-4 text-purple-light">Hobbies & Multimedia: aficionado por la cultura del drift car (JDM car)</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <h4 class="font-heading mb-3"><i class="bi bi-film"></i> Video Destacado</h4>
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://www.youtube.com/embed/sQMLdnVvsZ0" title="Video de presentación" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <h4 class="font-heading mb-3"><i class="bi bi-music-note-beamed"></i> Audio / Podcast</h4>
+                    <p>Insertar fragmento:</p>
+                    <audio controls class="w-100">
+                        <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+                        Tu navegador no soporta el elemento de audio.
+                    </audio>
+                    
+                    <h4 class="font-heading mt-4 mb-3"><i class="bi bi-images"></i> Galería</h4>
+                    <div id="carouselHobbies" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner rounded">
+                            <div class="carousel-item active">
+                                <img src="j2314.jpg" class="d-block w-100" alt="Hobby 1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="honda nsx.jpg" class="d-block w-100" alt="Hobby 2">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselHobbies" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselHobbies" data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- MODAL -->
+    <div class="modal fade" id="modalProyecto1" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark text-light border-danger">
+                <div class="modal-header border-bottom border-danger">
+                    <h5 class="modal-title font-heading">Detalles del Proyecto</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Este proyecto incluye diseño de interfaces, selección de paleta de colores y recursos visuales.</p>
+                </div>
+                <div class="modal-footer border-top border-danger">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-custom-dark text-center text-white py-4 mt-auto border-top border-purple">
+        <div class="container">
+            <div class="mb-3">
+              
+            </div>
+            <p class="mb-0">&copy; 2026 Sitio Personal. Rubén Peña.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

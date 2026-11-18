@@ -1,0 +1,285 @@
+
+:root {
+    --bg-black: #0d0d0d;
+    --bg-dark-card: #141414;
+    --purple-dark: #1c052d;
+    --purple-medium: #2a0845;
+    --purple-light: #b388ff;
+    --red-dark: #4a0000;       /* Rojo oscuro sólido para el menú */
+    --red-accent: #8b0000;
+    --red-bright: #d32f2f;
+    --text-light: #e0e0e0;
+    
+    /* Tipografías requeridas */
+    --font-primary: 'Montserrat', sans-serif;
+    --font-heading: 'Roboto Slab', serif;
+}
+
+
+body {
+    background-color: var(--bg-black);
+    color: var(--text-light);
+    font-family: var(--font-primary);
+    padding-top: 95px; /* Espacio para que el menú fijo no tape el contenido */
+}
+
+.font-heading {
+    font-family: var(--font-heading);
+    font-weight: 700;
+}
+
+
+header.fixed-top {
+    z-index: 1030;
+    background-color: var(--red-dark) !important;
+}
+
+.bg-custom-dark,
+.navbar {
+    background-color: var(--red-dark) !important;
+    border-bottom: 2px solid #2a0000;
+}
+
+.navbar .nav-link {
+    color: #f0f0f0 !important;
+    font-weight: 500;
+    padding: 8px 14px;
+    transition: color 0.2s ease;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+    color: #ffb4b4 !important;
+}
+
+
+.card-custom {
+    background-color: var(--bg-dark-card);
+    border: 1px solid var(--purple-medium);
+    box-shadow: 0 4px 15px rgba(42, 8, 69, 0.4);
+    transition: transform 0.3s ease;
+}
+
+.card-custom:hover {
+    transform: translateY(-5px);
+    border-color: var(--red-accent);
+}
+
+.btn-danger-custom {
+    background-color: var(--red-accent);
+    border-color: var(--red-dark);
+}
+
+.btn-danger-custom:hover {
+    background-color: var(--red-bright);
+    border-color: var(--red-accent);
+}
+
+.btn-purple {
+    background-color: var(--purple-medium);
+    color: #ffffff;
+    border-color: var(--purple-light);
+}
+
+.btn-purple:hover {
+    background-color: var(--purple-dark);
+    color: var(--purple-light);
+}
+
+.text-danger-custom { color: var(--red-bright); }
+.text-purple-light { color: var(--purple-light); }
+.border-purple { border-color: var(--purple-medium) !important; }
+.border-custom { border: 3px solid var(--red-accent); }
+
+
+.remedial-seccion-1 {
+    background-color: #f4f5f7 !important;
+    color: #222222;
+    border-radius: 8px;
+    padding: 60px 45px;
+    margin-top: 60px;
+    margin-bottom: 90px; /* Separación amplia */
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
+}
+
+.remedial-seccion-1 .subtitulo {
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #777;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+    display: block;
+}
+
+.remedial-seccion-1 .titulo-seccion {
+    font-size: 2.1rem;
+    font-weight: 800;
+    color: #111;
+    letter-spacing: 1.2px;
+    margin-bottom: 8px;
+}
+
+
+.remedial-seccion-1 .linea-decorativa {
+    width: 45px;
+    height: 2px;
+    background-color: #20c997;
+    margin-bottom: 35px;
+}
+
+.remedial-seccion-1 .icono-box {
+    font-size: 2.1rem;
+    color: #333333;
+    margin-bottom: 14px;
+    line-height: 1;
+}
+
+.remedial-seccion-1 .item-titulo {
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #111;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.remedial-seccion-1 .item-texto {
+    font-size: 0.83rem;
+    color: #666;
+    line-height: 1.55;
+    margin-bottom: 0;
+}
+
+.remedial-seccion-1 .persona-col {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.remedial-seccion-1 .img-recorte-persona {
+    max-height: 380px;
+    width: 100%;
+    max-width: 290px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+
+.remedial-seccion-2 {
+    background-color: #fafafa !important;
+    color: #222222;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 90px;     /* Separación superior amplia */
+    margin-bottom: 120px; /* Separación inferior amplia */
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
+}
+
+.remedial-seccion-2 .panel-izquierdo {
+    padding: 60px 45px;
+    background-color: #fafafa;
+}
+
+/* Pestañas superiores (DISEÑO / DESARROLLO) */
+.remedial-seccion-2 .nav-tabs-custom {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 35px;
+}
+
+.remedial-seccion-2 .tab-link {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #999;
+    text-decoration: none;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.remedial-seccion-2 .tab-link.active,
+.remedial-seccion-2 .tab-link:hover {
+    color: #111;
+    border-bottom-color: #111;
+}
+
+/* Fila de cada servicio: Ícono a la izquierda + texto a la derecha */
+.remedial-seccion-2 .service-row {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+.remedial-seccion-2 .service-icon {
+    font-size: 2.2rem;
+    color: #222;
+    margin-right: 22px;
+    line-height: 1;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.remedial-seccion-2 .service-content h5 {
+    font-size: 0.92rem;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: #111;
+    margin-bottom: 6px;
+}
+
+.remedial-seccion-2 .service-content p {
+    font-size: 0.83rem;
+    color: #666;
+    margin-bottom: 0;
+    line-height: 1.55;
+}
+
+.remedial-seccion-2 .service-banner {
+    position: relative;
+    min-height: 520px;
+    height: 100%;
+    background-color: #1a1a1a;
+    background-image: url('https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=900&q=80');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.remedial-seccion-2 .service-banner::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.52);
+}
+
+.remedial-seccion-2 .service-banner-content {
+    position: relative;
+    z-index: 2;
+    color: #ffffff;
+    padding: 30px;
+}
+
+.remedial-seccion-2 .service-banner-content h3 {
+    font-size: 2.4rem;
+    font-weight: 800;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.remedial-seccion-2 .service-banner-content p {
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+    color: #dcdcdc;
+    margin: 0;
+    font-style: italic;
+}
